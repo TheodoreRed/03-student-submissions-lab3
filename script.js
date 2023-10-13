@@ -7,12 +7,11 @@ const student4 = { name: "Jill", score: 88, passed: true };
 const submissions = [student1, student2, student3, student4];
 
 const addSubmission = (array, newName, newScore) => {
-  const newSubmission = {
+  array.push({
     name: newName,
     score: newScore,
     passed: newScore >= 60,
-  };
-  array.push(newSubmission);
+  });
 };
 console.log(submissions);
 addSubmission(submissions, "Bill", 60);
